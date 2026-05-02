@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium To-Do App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-mesh"></div>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Tasks</h1>
+            <p id="date-display">Today</p>
+        </header>
+
+        <form id="todo-form" class="input-group">
+            <input type="text" id="todo-input" placeholder="What needs to be done?" autocomplete="off" required>
+            <button type="submit" id="add-btn" aria-label="Add task">
+                <i class="ph ph-plus-circle"></i>
+            </button>
+        </form>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list">
+            <!-- Tasks will be injected here -->
+        </ul>
+        
+        <div class="app-footer">
+            <span id="tasks-count">0 items left</span>
+            <button id="clear-completed" class="clear-btn">Clear completed</button>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
